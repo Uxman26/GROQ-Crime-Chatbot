@@ -13,7 +13,7 @@ class ChatbotController extends Controller
         $caseDetails = $request->input('case_details');
 
         // $groq = new Groq(env('GROQ_API_KEY'));
-        $groq = new Groq('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'); // api key
+        $groq = new Groq('GROQ_API_KEY'); // api key
 
         $chatCompletion = $groq->chat()->completions()->create([ // groq api call
             'model' => 'llama3-8b-8192',
